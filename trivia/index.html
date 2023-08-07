@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+             document.addEventListener('DOMContentLoaded', ()=>{
+                document.querySelectorAll('.btn').forEach(el => el.addEventListener('click', ()=>{
+                    if (el.classList.contains('correct')){
+                        document.querySelector("#alert").innerHTML = "Correct"
+                        el.style.backgroundColor = "green"
+                    }
+                    else {
+                    document.querySelector("#alert").innerHTML = "Incorrect"
+                    el.style.backgroundColor = "red"
+                    }
+                }))
+             })
+
+             document.addEventListener('DOMContentLoaded', ()=>{
+                document.querySelector("#confirm").addEventListener("click", (e) => {
+                    e.stopPropagation()
+                    let answer = document.querySelector('input')
+                    if (answer.value == "mooscow" ){
+                        answer.style.backgroundColor = "green"
+                        document.querySelector("#alert2").innerHTML = "Correct"
+                    } else {
+                    answer.style.backgroundColor = "red"
+                    document.querySelector("#alert2").innerHTML = "Incorrect"
+
+                    }
+
+                })
+             })
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> What color is the sky?</h3>
+                <button class="btn wrong" value="red">red</button>
+                <button class = "btn wrong" value="blue">blue</button>
+                <button class = "btn wrong" value="white">white</button>
+                <button class = "btn correct" value="black">black</button>
+                <p id ="alert"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which Country is Vladimir Pootin from?</h3>
+                <form id ="form">
+                    <input autocomplete="off" autofocus placeholder="Your Answer" type ="textarea">
+                    <button type ="button" id="confirm">Confirm</button>
+                </form>
+                <p id ="alert2"></p>
+            </div>
+        </div>
+    </body>
+</html>

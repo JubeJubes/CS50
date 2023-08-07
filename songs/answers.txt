@@ -1,0 +1,2 @@
+The user is likely to have a purple aura; since the playlist's average danceability and energy is higher than .5 and the average valence is below .5.
+100 songs might be a small sample size to gauge a person's aura. A rolling measure of how the average energy, valence and danceabiility are changing may inicate the changing moods of the individual but may not necessarily represent what the individual might want to hear.

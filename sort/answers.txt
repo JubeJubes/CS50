@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: With a sorted queue, this sort performed well. While a reversed sort affected the sort's performance. This would have been because the bubble sort was consistently swapping over values in a reversed queue.
+
+sort2 uses: Merge Sort
+
+How do you know?: With a random queue, the runtime for this sort was consistently the shortest for all text files. Therefore, this is merge sort since the O(n) for merge is much smaller than the O(n) for selection or bubble sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: Given that sort2 was Merge Sort, sort3 performed better than sort1 (Bubble Sort) with a reversed queue but worse than sort1 with a sorted queue. Also the execution time was more stable than sort1 when performing sorting on sorted and reverse queues.
