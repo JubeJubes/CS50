@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h2>Quote Lookup</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through the database entries to display them in this table -->
+            <tr>
+                    <td>{{qlookup['name']}}</td>
+                    <td>{{qlookup['price']|usd}}</td>
+                    <td>{{qlookup['symbol']}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
